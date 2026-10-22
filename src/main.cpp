@@ -2,27 +2,32 @@
 #include <string>
 using namespace std;
 
-struct Sach {
-    string maSach;
-    string tenSach;
-    Sach* trai;
-    Sach* phai;
 
-    Sach(string ma, string ten)
-        : maSach(ma), tenSach(ten),
-          trai(nullptr), phai(nullptr) {}
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct Book {
+    string ISBN;
+    string title;
+    string author;
+    int year;
 };
 
 int main() {
-    cout << "QUAN LY THU VIEN - BST\n";
-    cout << "Du an DT04_QuanLyThuVien_BST\n";
+    Book b;
 
-    Sach* sach = new Sach("S001", "Lap trinh C++");
+    b.ISBN = "978001";
+    b.title = "Lap trinh C++";
+    b.author = "Nguyen Van A";
+    b.year = 2025;
 
-    cout << "Ma sach: " << sach->maSach << '\n';
-    cout << "Ten sach: " << sach->tenSach << '\n';
+    cout << "ISBN: " << b.ISBN << endl;
+    cout << "Ten sach: " << b.title << endl;
+    cout << "Tac gia: " << b.author << endl;
+    cout << "Nam xuat ban: " << b.year << endl;
 
-    delete sach;
     return 0;
 }
+
 
