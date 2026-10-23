@@ -1,1 +1,17 @@
 
+# File da bien dich tren Windows
+*.exe
+*.o
+*.obj
+
+# File tam va log
+*.log
+*.tmp
+
+# Cau hinh VS Code rieng tren may
+.vscode/
+
+# File he thong
+Thumbs.db
+.DS_Store
+
