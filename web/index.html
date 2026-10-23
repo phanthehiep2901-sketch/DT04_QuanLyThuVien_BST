@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý thư viện BST</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>📚 Quản lý thư viện</h1>
+            <p>Hệ thống quản lý sách bằng cây tìm kiếm nhị phân BST</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="stats">
+            <div class="stat-card">
+                <h3>Tổng số sách</h3>
+                <p id="totalBooks">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Trạng thái</h3>
+                <p class="status">Sẵn sàng</p>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>Thêm sách mới</h2>
+
+            <form id="bookForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="bookId">Mã sách</label>
+                        <input type="number" id="bookId"
+                               placeholder="Ví dụ: 101" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bookTitle">Tên sách</label>
+                        <input type="text" id="bookTitle"
+                               placeholder="Nhập tên sách" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bookAuthor">Tác giả</label>
+                        <input type="text" id="bookAuthor"
+                               placeholder="Nhập tên tác giả" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bookYear">Năm xuất bản</label>
+                        <input type="number" id="bookYear"
+                               placeholder="Ví dụ: 2025" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    + Thêm sách
+                </button>
+            </form>
+        </section>
+
+        <section class="panel">
+            <h2>Danh sách sách</h2>
+
+            <div class="search-bar">
+                <input type="text" id="searchInput"
+                       placeholder="Tìm theo mã, tên sách hoặc tác giả...">
+                <button id="searchButton" class="btn btn-primary">
+                    Tìm kiếm
+                </button>
+                <button id="showAllButton" class="btn btn-secondary">
+                    Hiện tất cả
+                </button>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Mã sách</th>
+                            <th>Tên sách</th>
+                            <th>Tác giả</th>
+                            <th>Năm xuất bản</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bookTable">
+                        <tr>
+                            <td colspan="5" class="empty">
+                                Chưa có dữ liệu sách.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <p id="message" class="message" role="status"></p>
+    </main>
+
+    <footer>
+        <p>Đề tài DT04 — Quản lý thư viện bằng BST</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

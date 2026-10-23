@@ -1,0 +1,447 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f6fb;
+    color: #263247;
+}
+
+.container {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+}
+
+.header {
+    background: #183b67;
+    color: white;
+    padding: 28px 0;
+}
+
+.header h1 {
+    margin: 0 0 8px;
+}
+
+.header p {
+    margin: 0;
+    color: #dce8f7;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin: 24px 0;
+}
+
+.stat-card,
+.panel {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.stat-card h3 {
+    margin: 0;
+    color: #64748b;
+    font-size: 15px;
+}
+
+.stat-card p {
+    margin: 12px 0 0;
+    font-size: 28px;
+    font-weight: bold;
+    color: #183b67;
+}
+
+.stat-card .status {
+    font-size: 20px;
+    color: #16845b;
+}
+
+.panel {
+    margin-bottom: 24px;
+}
+
+.panel h2 {
+    margin-top: 0;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+input:focus {
+    outline: 2px solid #9bc4ff;
+    border-color: #3274c8;
+}
+
+.btn {
+    padding: 11px 16px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background: #2463b5;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #184c91;
+}
+
+.btn-secondary {
+    background: #e2e8f0;
+    color: #263247;
+}
+
+.search-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.search-bar input {
+    flex: 1;
+    min-width: 0;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+    background: #edf3fa;
+    color: #183b67;
+}
+
+.empty {
+    text-align: center;
+    color: #64748b;
+    padding: 28px;
+}
+
+.message {
+    min-height: 24px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    color: #64748b;
+    padding: 20px;
+}
+
+@media (max-width: 650px) {
+    .form-grid,
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .search-bar {
+        flex-wrap: wrap;
+    }
+
+    .search-bar input {
+        flex-basis: 100%;
+    }
+}
+
+/* Thong bao trang thai */
+#message {
+    margin: 12px 0;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+#message.success {
+    color: #166534 !important;
+    background-color: #dcfce7;
+    border: 1px solid #86efac;
+}
+
+#message.error {
+    color: #991b1b !important;
+    background-color: #fee2e2;
+    border: 1px solid #fca5a5;
+}
+
+#message.info {
+    color: #1e40af !important;
+    background-color: #dbeafe;
+    border: 1px solid #93c5fd;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ========================================
+   HOAN THIEN GIAO DIEN BANG SACH
+   ======================================== */
+
+/* Lam cho cac phan tu tinh toan kich thuoc de hon */
+* {
+    box-sizing: border-box;
+}
+
+/* Bang sach */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+    background-color: #ffffff;
+}
+
+/* Tieu de va o du lieu */
+table th,
+table td {
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+    vertical-align: middle;
+}
+
+/* Hang tieu de */
+table thead th {
+    background-color: #f3f4f6;
+    color: #374151;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* Hieu ung khi re chuot vao hang sach */
+table tbody tr {
+    transition: background-color 0.15s ease;
+}
+
+table tbody tr:hover {
+    background-color: #f0fdf4;
+}
+
+/* Dong thong bao khong co sach */
+table td.empty {
+    padding: 28px 12px;
+    text-align: center;
+    color: #6b7280;
+    font-style: italic;
+    background-color: #f9fafb;
+}
+
+/* Nut xoa sach */
+table button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+table button:hover:not(:disabled) {
+    opacity: 0.85;
+    transform: translateY(-1px);
+}
+
+table button:focus-visible {
+    outline: 3px solid #93c5fd;
+    outline-offset: 2px;
+}
+
+/* O nhap lieu va nut thao tac */
+input,
+select,
+textarea {
+    max-width: 100%;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #86efac;
+    outline-offset: 1px;
+}
+
+/* Bo cuc tren man hinh nho */
+@media (max-width: 768px) {
+    table th,
+    table td {
+        padding: 9px 8px;
+        font-size: 13px;
+    }
+
+    table button {
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    table th,
+    table td {
+        padding: 7px 6px;
+        font-size: 12px;
+    }
+}
+
+/* ========================================
+   FORM THEM SACH
+   ======================================== */
+
+#bookForm {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    align-items: end;
+}
+
+#bookForm label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+}
+
+#bookForm input {
+    width: 100%;
+    min-width: 0;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #111827;
+    font-size: 14px;
+}
+
+#bookForm input:focus {
+    border-color: #16a34a;
+    outline: 2px solid #bbf7d0;
+    outline-offset: 1px;
+}
+
+#bookForm button[type="submit"] {
+    min-height: 40px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #15803d;
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#bookForm button[type="submit"]:hover:not(:disabled) {
+    background-color: #166534;
+}
+
+#bookForm button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+/* ========================================
+   KHU VUC TIM KIEM
+   ======================================== */
+
+#searchInput {
+    min-width: 0;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+#searchButton,
+#showAllButton {
+    min-height: 40px;
+    padding: 9px 14px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#searchButton {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+#showAllButton {
+    background-color: #e5e7eb;
+    color: #1f2937;
+}
+
+#searchButton:hover,
+#showAllButton:hover {
+    filter: brightness(0.95);
+}
+
+/* ========================================
+   MAN HINH NHO
+   ======================================== */
+
+@media (max-width: 600px) {
+    #bookForm {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    #bookForm button[type="submit"] {
+        width: 100%;
+    }
+
+    #searchInput {
+        width: 100%;
+    }
+
+    #searchButton,
+    #showAllButton {
+        min-height: 42px;
+    }
+}
